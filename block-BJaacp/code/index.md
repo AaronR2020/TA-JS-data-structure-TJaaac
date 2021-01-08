@@ -2,24 +2,27 @@
 
 ```js
 let obj = { name: 'Arya' };
+...............................
 obj = { surname: 'Stark' };
+
 let newObj = { name: 'Arya' };
-let user = obj;
+
+let user = obj;//surname=stark;
 let arr = ['Hi'];
 let arr2 = arr;
 ```
 
 Answer the following with reason after going through the above code:
 
-- `[10] === [10]`
+- `[10] === [10]`//2 arrays cannot be equal
 - What is the value of obj? // answer
-- `obj == newObj`
-- `obj === newObj`
-- `user === newObj`
-- `user == newObj`
-- `user == obj`
-- `arr == arr2`
-- `arr === arr2`
+- `obj == newObj`//false as object hold different values
+- `obj === newObj`//false as object holds different addresses
+- `user === newObj`//false as object holds different addresses
+- `user == newObj`//false as object holds different addresses
+- `user == obj`//true as object holds same value
+- `arr == arr2`//true as object holds same value
+- `arr === arr2`//true as object holds same value
 
 2. What's will be the value of `person1` and `person2` ? Explain with reason. Draw the memory representation diagram.
 
@@ -33,8 +36,8 @@ function personDetails(person) {
 }
 var person1 = { name: 'Alex', age: 30 };
 var person2 = personDetails(person1);
-console.log(person1);
-console.log(person2);
+console.log(person1);//{ name: 'Alex', age: 30 }
+console.log(person2);//{ name: 'John', age: 50 }
 ```
 
 3. What will be the output of the below code:
