@@ -18,18 +18,18 @@ let newUser = user;
 
 2. Answer the following with reason:
 
-- `user == newUser;` // output and reason
-- `user === newUser;`
-- `user.name === newUser.name;`
-- `user.name == newUser.name;`
-- `user.sibling == newUser.sibling;`
-- `user.sibling === newUser.sibling;`
-- `user.sibling == allBrothers;`
-- `user.sibling === allBrothers;`
-- `brothersCopy === allBrothers;`
-- `brothersCopy == allBrothers;`
-- `brothersCopy == user.sibling;`
-- `brothersCopy === user.sibling;`
-- `brothersCopy[0] === user.sibling[0];`
-- `brothersCopy[1] === user.sibling[1];`
-- `user.sibling[1] === newUser.sibling[1];`
+- `user == newUser;` // true as they both hold the same reference point
+- `user === newUser;`// true as they both hold the same reference point
+- `user.name === newUser.name;`// true as they both point to the same block within a block of memory
+- `user.name == newUser.name;`// true as they both point to the same block within a block of memory
+- `user.sibling == newUser.sibling;` // true as they both point to the same block within a block of memory
+- `user.sibling === newUser.sibling;` // true as they both point to the same block within a block of memory
+- `user.sibling == allBrothers;`//false as although they might be the same values they point to different memory locations.
+- `user.sibling === allBrothers;`//false as although they might be the same values they point to different memory locations.
+- `brothersCopy === allBrothers;`//false as user.sibling is still of data type object, that means it still holds location rather than the actual value.
+- `brothersCopy == allBrothers;`//false as user.sibling is still of data type object, that means it still holds location rather than the actual value.
+- `brothersCopy == user.sibling;`//yes as they both point to the same location, i.e they both hold the same value.
+- `brothersCopy === user.sibling;`////yes as they both point to the same location, i.e they both hold the same value.
+- `brothersCopy[0] === user.sibling[0];`//trut as in this case we onlu check the value and datatype
+- `brothersCopy[1] === user.sibling[1];`//trut as in this case we onlu check the value and datatype
+- `user.sibling[1] === newUser.sibling[1];`//true as in this case we onlu check the value and datatype 
